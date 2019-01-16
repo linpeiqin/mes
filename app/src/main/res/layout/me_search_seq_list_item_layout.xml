@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!-- 已开启工序列表的Item View -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/sd_padding_common_edge_middle"
+    android:paddingTop="@dimen/sd_padding_common_edge_middle" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" >
+        
+        <TextView
+            style="@style/sd_text_black_middle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/sd_padding_common_edge_small"
+            android:text="@string/ko_title_seq_list_trx_id" />
+
+        <TextView
+            android:id="@+id/search_seq_item_trx_id"
+            style="@style/sd_text_gray_middle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/sd_padding_common_edge_huge" />
+        
+        <TextView
+            style="@style/sd_text_black_middle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/sd_padding_common_edge_small"
+            android:text="@string/ko_title_seq_list_op_code" />
+
+        <TextView
+            android:id="@+id/search_seq_item_op_code"
+            style="@style/sd_text_gray_middle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/sd_padding_common_edge_huge" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sd_padding_common_edge_small"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/sd_text_black_middle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ko_title_seq_list_trx_qty"  
+            android:paddingRight="@dimen/sd_padding_common_edge_small"/>
+
+        <TextView
+            android:id="@+id/search_seq_item_trx_qty"
+            style="@style/sd_text_gray_middle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginRight="@dimen/sd_padding_common_edge_huge"
+            />
+        
+        <TextView
+            style="@style/sd_text_black_middle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ko_title_seq_list_scrap_qty"  
+            android:paddingRight="@dimen/sd_padding_common_edge_small"/>
+
+        <TextView
+            android:id="@+id/search_seq_item_scrap_qty"
+            style="@style/sd_text_gray_middle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginRight="@dimen/sd_padding_common_edge_huge"/>
+        
+        <TextView
+            style="@style/sd_text_black_middle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/sd_padding_common_edge_small"
+            android:text="@string/ko_title_seq_list_update_date" />
+
+        <TextView
+            android:id="@+id/search_seq_item_update_date"
+            style="@style/sd_text_gray_middle_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/sd_padding_common_edge_huge" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/sd_activity_style">
+
+    <cn.kol.pes.widget.KoPageTitleLayoutView
+        android:id="@+id/sd_common_title_view"
+        style="@style/sd_common_top_bar_class_use_style">
+    </cn.kol.pes.widget.KoPageTitleLayoutView>
+
+    <LinearLayout
+        style="@style/sd_page_content_style"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="工程单号：" />
+
+                    <TextView
+                        android:id="@+id/text_job_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="工程单号" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="女工工序：" />
+
+                    <TextView
+                        android:id="@+id/text_handwork_seq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="女工工序" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="生产单号：" />
+
+                    <TextView
+                        android:id="@+id/text_wip_entity_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="生产单号" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="成品名称：" />
+
+                    <TextView
+                        android:id="@+id/text_item_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="成品名称" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/sd_page_content_style">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1.0"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/sd_padding_common_edge">
+            <RadioButton
+                android:id="@+id/radio_mtl_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计划"
+                android:layout_marginRight="@dimen/sd_padding_common_edge"/>
+
+            <RadioButton
+                android:id="@+id/radio_mtl_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新增"/>
+        </RadioGroup>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableRow
+                android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_vertical"
+                 android:orientation="horizontal"
+                >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+                    <EditText
+                        android:id="@+id/edit_mtl_no"
+                        style="@style/sd_edit_text_style"
+                        android:layout_centerVertical="true"
+                        android:hint="物料编号"
+                        android:singleLine="true" />
+                    <ImageView
+                        android:id="@+id/btn_mtl_no_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/sd_padding_common_edge_huge"
+                        android:paddingRight="@dimen/sd_padding_common_edge_middle"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ko_wip_id_search_icon_4"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+                <Button
+                    android:id="@+id/btn_mtl_no_scan"
+                    style="@style/sd_button_bottom_bar_no_weight_style"
+                    android:layout_width="106dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="@dimen/sd_padding_common_edge"
+                    android:padding="@dimen/sd_padding_common_edge_small"
+                    android:text="@string/ko_title_scan_material_code"
+                    android:visibility="gone"/>
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableRow>
+                <TextView
+                    android:id="@+id/edit_mtl_name"
+                    style="@style/sd_edit_text_style"
+                    android:hint="物料名称"
+                    android:singleLine="true"
+                    android:layout_centerVertical="true"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/edit_plan_quantity"
+                    style="@style/sd_edit_text_style"
+                    android:hint="计划用量"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/edit_already_quantity"
+                    style="@style/sd_edit_text_style"
+                    android:hint="已报用量"
+                    android:layout_centerVertical="true"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/edit_can_quantity"
+                    style="@style/sd_edit_text_style"
+                    android:hint="可报用量"
+                    android:layout_centerVertical="true"
+                    />
+                <EditText
+                    android:id="@+id/edit_actual_quantity"
+                    style="@style/bt_edit_text_style"
+                    android:hint="实际用量"
+                    android:phoneNumber="true"
+                    />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/edit_uom"
+                    style="@style/sd_edit_text_style"
+                    android:hint="单位"
+                    android:layout_centerVertical="true"
+                    />
+                <EditText
+                    android:id="@+id/edit_remark"
+                    style="@style/sd_edit_text_style"
+                    android:hint="备注"
+                    android:layout_centerVertical="true"
+                    />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:padding="@dimen/sd_padding_common_edge_middle">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <WebView
+                android:id="@+id/text_declare_mtl_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                tools:ignore="WebViewLayout"
+               />
+        </LinearLayout>
+
+    </ScrollView>
+    <!--按钮列表-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/sd_padding_common_edge_small"
+        android:paddingRight="@dimen/sd_padding_common_edge_small"
+        android:paddingBottom="@dimen/sd_padding_common_edge_middle">
+        <Button
+            android:id="@+id/declare_mtl_next_btn"
+            style="@style/sd_button_bottom_bar_style"
+            android:text="完成" />
+        <Button
+            android:id="@+id/declare_mtl_back_btn"
+            style="@style/sd_button_bottom_bar_style"
+            android:text="退料"
+            />
+
+    </LinearLayout>
+</LinearLayout>

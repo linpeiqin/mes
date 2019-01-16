@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/sd_activity_style">
+
+    <cn.kol.pes.widget.KoPageTitleLayoutView
+        android:id="@+id/sd_common_title_view"
+        style="@style/sd_common_top_bar_class_use_style"></cn.kol.pes.widget.KoPageTitleLayoutView>
+
+    <LinearLayout
+        style="@style/sd_page_content_style"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工程单号：" />
+
+                <TextView
+                    android:id="@+id/text_job_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工程单号" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="产品编号：" />
+
+                <TextView
+                    android:id="@+id/text_item_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="产品编号" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="生产单号：" />
+
+                <TextView
+                    android:id="@+id/text_wip_entity_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="生产单号" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标准工序：" />
+
+                <TextView
+                    android:id="@+id/text_operation_seq_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标准工序" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/sd_page_content_style">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="女工工序：" />
+
+                <TextView
+                    android:id="@+id/produce_asset_seq_female_edit"
+                    style="@style/sd_edit_text_style"
+                    android:hint="女工工序"
+                    android:singleLine="true"
+                     />
+                <TextView
+                    android:id="@+id/text_goods_quantity_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成品数：" />
+
+                <EditText
+                    android:id="@+id/edit_goods_quantity"
+                    style="@style/sd_edit_text_style"
+                    android:phoneNumber="true"
+                    android:hint="成品数" />
+
+                <TextView
+                    android:id="@+id/text_subgoods_quantity_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="半制品："
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/edit_subgoods_quantity"
+                    style="@style/sd_edit_text_style"
+                    android:phoneNumber="true"
+                    android:hint="半制品"
+                    android:visibility="gone"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="女工工序描述：" />
+
+                <EditText
+                    android:id="@+id/produce_asset_seq_desc_edit"
+                    style="@style/sd_edit_text_style"
+                    android:hint="女工工序描述"
+                    android:singleLine="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人数：" />
+
+                <EditText
+                    android:id="@+id/edit_quantity"
+                    style="@style/sd_edit_text_style"
+                    android:hint="人数"
+                    android:phoneNumber="true" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开拉时间：" />
+
+                <TextView
+                    android:id="@+id/edit_start_pull_time"
+                    style="@style/sd_edit_text_style"
+                    android:hint="开拉时间"
+                    android:singleLine="true"
+                    android:inputType="datetime" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收拉时间：" />
+
+                <TextView
+                    android:id="@+id/edit_end_pull_time"
+                    style="@style/sd_edit_text_style"
+                    android:hint="收拉时间"
+                    android:singleLine="true"
+                    android:inputType="time" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总工时：" />
+
+                <EditText
+                    android:id="@+id/edit_work_time"
+                    style="@style/sd_edit_text_style"
+                    android:phoneNumber="true"
+                    android:hint="总工时" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单位：" />
+
+                <TextView
+                    android:id="@+id/edit_transaction_uom"
+                    style="@style/sd_edit_text_style"
+                    android:hint="单位" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="每小时产量：" />
+
+                <EditText
+                    android:id="@+id/edit_per_quantity"
+                    style="@style/sd_edit_text_style"
+                    android:phoneNumber="true"
+                    android:hint="每小时产量" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="生产坏货数：" />
+
+                <EditText
+                    android:id="@+id/edit_goods_waste_quantity"
+                    style="@style/sd_edit_text_style"
+                    android:phoneNumber="true"
+                    android:hint="生产坏货数" />
+            </TableRow>
+
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="坏货原因：" />
+
+                <TextView
+                    android:id="@+id/edit_reason_code"
+                    style="@style/sd_edit_text_style"
+                    android:hint="坏货原因"
+                    android:singleLine="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="详细原因：" />
+
+                <EditText
+                    android:id="@+id/edit_reason_remark"
+                    style="@style/sd_edit_text_style"
+                    android:hint="详细原因" />
+
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:padding="@dimen/sd_padding_common_edge_middle">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/text_declare_time_list"
+                style="@style/sd_text_black_big_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="WebViewLayout"
+                 />
+        </LinearLayout>
+    </ScrollView>
+    <!--按钮列表-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/sd_padding_common_edge_small"
+        android:paddingRight="@dimen/sd_padding_common_edge_small"
+        android:paddingBottom="@dimen/sd_padding_common_edge_middle">
+
+        <Button
+            android:id="@+id/declare_time_finish_btn"
+            style="@style/sd_button_bottom_bar_style"
+            android:text="完成" />
+        <Button
+            android:id="@+id/declare_mtl_begin_btn"
+            style="@style/sd_button_bottom_bar_style"
+            android:text="物料报数" />
+    </LinearLayout>
+</LinearLayout>

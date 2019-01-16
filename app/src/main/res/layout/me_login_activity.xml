@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	style="@style/sd_activity_style" >
+
+    <cn.kol.pes.widget.KoPageTitleLayoutView
+        android:id="@+id/sd_common_title_view"
+        style="@style/sd_common_top_bar_class_use_style" >
+    </cn.kol.pes.widget.KoPageTitleLayoutView>
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1.0">
+
+		<Button
+			android:id="@+id/splash_settings_btn"
+			android:layout_width="129dp"
+			android:layout_height="129dp"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:background="@null" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="@dimen/sd_padding_common_edge_middle">
+			<!--用户名-->
+			<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0">
+
+				<EditText
+					android:id="@+id/login_user_name_edit"
+					style="@style/sd_edit_text_style"
+					android:hint="用户名"
+					android:phoneNumber="true" />
+
+				<ImageView
+					android:id="@+id/login_user_name_scan_view"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:paddingLeft="@dimen/sd_padding_common_edge_huge"
+					android:paddingRight="@dimen/sd_padding_common_edge_small"
+					android:scaleType="fitCenter"
+					android:src="@drawable/ko_scan_icon" />
+			</RelativeLayout>
+			<!--密码-->
+			<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0">
+
+				<EditText
+					android:id="@+id/login_user_password_edit"
+					style="@style/sd_edit_text_style"
+					android:hint="密码"
+					android:password="true" />
+			</RelativeLayout>
+			<!--成品或版单-->
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				>
+				<RadioGroup
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					>
+					<RadioButton
+						android:id="@+id/main_edition_list_radio"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="版单"
+						/>
+
+					<RadioButton
+						android:id="@+id/main_finished_product_radio"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="成品"/>
+				</RadioGroup>
+
+			</RelativeLayout>
+			<!--选择工厂-->
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				>
+				<TextView
+					android:id="@+id/choice_org_text"
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:gravity="center"
+					android:hint="选择工厂"
+					android:text="东莞新州" />
+			</RelativeLayout>
+		</LinearLayout>
+
+
+		<TextView
+			android:id="@+id/splash_login_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:background="@drawable/ko_login_btn_bg_selector"
+			android:gravity="center"
+			android:text="@string/ko_title_login"
+			android:textColor="@color/sd_color_white"
+			android:textSize="30dp"
+			android:textStyle="bold" />
+	</RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/splash_version_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/sd_text_gray_big_style"
+        android:layout_margin="@dimen/sd_padding_common_edge_huge" />
+
+</LinearLayout>

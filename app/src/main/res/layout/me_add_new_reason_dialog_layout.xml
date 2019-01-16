@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp" >
+    
+    <LinearLayout
+        style="@style/sd_page_content_style"
+        android:orientation="vertical" >
+
+       <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/sd_padding_common_edge">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sd_text_black_middle_style"
+                android:layout_marginRight="@dimen/sd_padding_common_edge"
+                android:text="新增原因"
+                android:minWidth="80dp"/>
+            
+            <EditText
+                    android:id="@+id/added_new_reason_edit"
+                    style="@style/sd_edit_text_style" />
+        </LinearLayout>
+        
+       <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+	            android:id="@+id/added_new_reason_sure_btn"
+	            style="@style/sd_button_bottom_bar_style"
+	            android:layout_margin="@dimen/sd_padding_common_edge"
+	            android:text="确认" />
+            
+            <Button
+	            android:id="@+id/added_new_reason_cancel_btn"
+	            style="@style/sd_button_bottom_bar_style"
+	            android:layout_margin="@dimen/sd_padding_common_edge"
+	            android:text="取消" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>
